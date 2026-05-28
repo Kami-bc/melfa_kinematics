@@ -36,3 +36,17 @@ def draw_frame(ax, origin, R, length=1.0):
         z_axis[0], z_axis[1], z_axis[2],
         color='b'
     )
+
+def draw_vector(ax, origin, vector, color='k'):
+
+    ax.quiver(
+        origin[0], origin[1], origin[2],
+        vector[0], vector[1], vector[2],
+        color=color
+    )
+
+def set_axes_equal(ax, limit=1.0):
+
+    ax.set_xlim(-limit, limit)
+    ax.set_ylim(-limit, limit)
+    ax.set_zlim(-limit, limit)

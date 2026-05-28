@@ -41,3 +41,12 @@ def T(R, p):
     H[:3, 3] = p
 
     return H
+
+def T(R, p):
+
+    H = np.eye(4)
+
+    H[0:3, 0:3] = R
+    H[0:3, 3] = p
+
+    return H
