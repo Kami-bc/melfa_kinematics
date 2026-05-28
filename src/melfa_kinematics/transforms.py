@@ -32,3 +32,12 @@ def Rz(theta):
         [s, c, 0],
         [0, 0, 1]
     ])
+
+def T(R, p):
+
+    H = np.eye(4)
+
+    H[:3, :3] = R
+    H[:3, 3] = p
+
+    return H
