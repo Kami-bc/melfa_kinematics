@@ -50,3 +50,13 @@ def T(R, p):
     H[0:3, 3] = p
 
     return H
+
+def translation(x, y, z):
+
+    H = np.eye(4)
+
+    H[0, 3] = x
+    H[1, 3] = y
+    H[2, 3] = z
+
+    return H
